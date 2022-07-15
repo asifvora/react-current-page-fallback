@@ -1,7 +1,7 @@
 {
   "name": "react-current-page-fallback",
   "version": "1.0.0",
-  "description": "React Page Fallback",
+  "description": "Keep the current page rendered as a fallback until the new page is loaded with React.lazy and React.Suspense",
   "private": false,
   "author": "Asif Vora <asifvora0@gmail.com>",
   "license": "MIT",

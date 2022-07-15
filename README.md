@@ -1,6 +1,6 @@
 <h1 align="center">react-current-page-fallback</h1>
 
-<p align="center">Easy-to-use ui compoment</p>
+<p align="center">Keep the current page rendered as a fallback until the new page is loaded with React.lazy and React.Suspense</p>
 
 ```sh
 npm i --save react-current-page-fallback
@@ -13,33 +13,80 @@ yarn add react-current-page-fallback
 <h2 align="center">Usage</h2>
 
 ### Basic example
-**App.js**
 
+**index.js**
 ```javascript
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
-import { FallbackProvider } from "react-current-page-fallback";
-
-const Home = React.lazy(() => import("./Home"));
-const About = React.lazy(() => import("./About"));
-const Contact = React.lazy(() => import("./Contact"));
+import App from "./App";
 
 const container = document.getElementById("root");
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
 
-root.render(
-  <BrowserRouter>
-    <FallbackProvider>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-      </Routes>
-    </FallbackProvider>
-  </BrowserRouter>
-);
+root.render(<><App/></>);
+```
 
+**App.js**
+### react-router-dom V6
+```javascript
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { FallbackProvider } from "react-current-page-fallback";
+
+const Home = React.lazy(() => import("./pages/Home"));
+const About = React.lazy(() => import("./pages/About"));
+const Contact = React.lazy(() => import("./pages/Contact"));
+
+// react-router-dom V6
+const App = () => {
+  return (
+    <Router>
+      <div>
+        <FallbackProvider>
+          <Routes>
+            <Route path="/about" element={ <About />} />
+            <Route path="/contact" element={ <Contact />} />
+            <Route path="/" element={ <Home />} />
+          </Routes>
+        </FallbackProvider>
+      </div>
+    </Router>
+  );
+};
+export default App;
+```
+
+**App.js**
+
+### react-router-dom V5
+
+```javascript
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { FallbackProvider } from "react-current-page-fallback";
+
+// react-router-dom V5
+const App = () => {
+  return (
+    <Router>
+      <div>
+        <FallbackProvider>
+          <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </FallbackProvider>
+      </div>
+    </Router>
+  );
+};
 export default App;
 ```
 
