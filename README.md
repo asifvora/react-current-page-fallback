@@ -2,11 +2,35 @@
 
 <p align="center">Keep the current page rendered as a fallback until the new page is loaded with React.lazy and React.Suspense</p>
 
-```sh
+<p align="center">
+  <a href="https://github.com/asifvora/react-current-page-fallback/blob/master/LICENSE" target="blank">
+    <img src="https://img.shields.io/badge/%20license-MIT%20-green" alt="react-current-page-fallback licence" />
+  </a>
+  <a href="https://github.com/asifvora/react-current-page-fallback/fork" target="blank">
+   <img src="https://img.shields.io/github/forks/asifvora/react-current-page-fallback?style=flat-square" alt="react-current-page-fallback forks"/>
+  </a>
+  <a href="https://github.com/asifvora/react-current-page-fallback/stargazers" target="blank">
+   <img src="https://img.shields.io/github/stars/asifvora/react-current-page-fallback?style=flat-square" alt="react-current-page-fallback stars"/>
+  </a>
+  <a href="https://github.com/asifvora/react-current-page-fallback/issues" target="blank">
+    <img src="https://img.shields.io/github/issues/asifvora/react-current-page-fallback?style=flat-square" alt="react-current-page-fallback issues"/>
+  </a>
+  <a href="https://github.com/asifvora/react-current-page-fallback/pulls" target="blank">
+   <img src="https://img.shields.io/github/issues-pr/asifvora/react-current-page-fallback?style=flat-square" alt="react-current-page-fallback pull-requests"/>
+  </a>
+</p>
+
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![ReactRouter](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)](https://reactrouter.com/)
+
+# 🛠️ Installation Steps
+
+```bash
 npm i --save react-current-page-fallback
 ```
 
-```sh
+```bash
 yarn add react-current-page-fallback
 ```
 
@@ -173,8 +197,7 @@ export default Contact;
 ```
 
 
-<h2 align="center">Example</h2>
-
+# Example
 You can run the example by cloning the repo:
 
 ```sh
@@ -183,31 +206,22 @@ yarn
 yarn start
 ```
 
-## Questions?🤔
+# 🛡️ License
 
-Hit me on [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/007_dark_shadow)
-[![Medium](https://img.shields.io/badge/Medium-asifvora-brightgreen.svg)](https://medium.com/@asifvora)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-asifvora-blue.svg)](https://www.linkedin.com/in/asif-vora/)
-[![Instagram](https://img.shields.io/badge/Instagram-Asif%20Vora-green.svg)](https://www.instagram.com/007_dark_shadow/)
+This project is licensed under the MIT License - see the [`LICENSE`](LICENSE) file for details.
 
-## License
+# 👨‍💻 Author
+### 👤 Asif Vora
+- Github: [@asifvora](https://github.com/asifvora)
+- LinkedIn: [@asif-vora](https://www.linkedin.com/in/asif-vora/)
+- Twitter: [@007_dark_shadow](https://twitter.com/007_dark_shadow)
+- Instagram: [@007_dark_shadow](https://www.instagram.com/007_dark_shadow/)
 
-Copyright (c) Asif Vora
+# 🍰 Contributing
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+- Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/asifvora/react-current-page-fallback/compare).
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+- Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+# 🙏 Support
+This project needs a ⭐️  from you. Don't forget to leave a star ⭐️
