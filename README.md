@@ -1,6 +1,6 @@
 <h1 align="center">react-current-page-fallback</h1>
 
-<p align="center">Keep the current page rendered as a fallback until the new page is loaded with React.lazy and React.Suspense</p>
+<p align="center">Keep the current page rendered as a fallback until the new page is loaded with React.lazy and React.Suspense. Route level code splitting in react without screen flickering (React Suspense + React Router Dom + React Topbar Progress Indicator)</p>
 
 <p align="center">
   <a href="https://github.com/asifvora/react-current-page-fallback/blob/master/LICENSE" target="blank">
@@ -221,6 +221,7 @@ export default Contact;
 ```
 
 # Preview
+## Test this using Slow 3G for better results
 ![](./react-current-page-fallback.gif)
 
 # Example
