@@ -60,7 +60,7 @@ import { FallbackPageWrapper } from "react-current-page-fallback";
 ...
 ```
 
-## 📂 Example
+## 📂 Code Example
 
 **index.js**
 ```javascript
@@ -220,7 +220,8 @@ const Contact  = () => {
 export default Contact;
 ```
 
-
+# Preview
+![](./react-current-page-fallback.gif)
 
 # Example
 You can run the example by cloning the repo:
