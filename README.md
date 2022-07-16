@@ -26,17 +26,41 @@
 
 # 🛠️ Installation Steps
 
+Using npm:
 ```bash
 npm i --save react-current-page-fallback
 ```
 
+Using yarn:
 ```bash
 yarn add react-current-page-fallback
 ```
 
-<h2 align="center">Usage</h2>
+# 📖 Usage
+```javascript
+import { FallbackProvider } from "react-current-page-fallback";
 
-### Basic example
+// Wrapp root FallbackProvider for all routes
+<FallbackProvider>
+  your app routes here...
+</FallbackProvider>
+
+// Wrapp every page using FallbackPageWrapper 
+import { FallbackPageWrapper } from "react-current-page-fallback";
+
+<FallbackPageWrapper>
+  your page-1 here...
+</FallbackPageWrapper>
+
+
+<FallbackPageWrapper>
+  your page-2 here...
+</FallbackPageWrapper>
+
+...
+```
+
+## 📂 Example
 
 **index.js**
 ```javascript
@@ -195,6 +219,7 @@ const Contact  = () => {
 
 export default Contact;
 ```
+
 
 
 # Example
