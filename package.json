@@ -1,11 +1,11 @@
 {
   "name": "react-current-page-fallback",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Keep the current page rendered as a fallback until the new page is loaded with React.lazy and React.Suspense",
   "private": false,
   "author": "Asif Vora <asifvora0@gmail.com>",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/asifvora/react-current-page-fallback.git"
@@ -17,7 +17,7 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.dev.js",
     "build": "webpack --config ./webpack.config.prod.js",
-    "publish": "yarn build && cp package.json ./lib && cd ./lib",
+    "pub": "yarn build && cp package.json ./lib && cd ./lib && npm publish",
     "test": "jest --coverage"
   },
   "keywords": [
