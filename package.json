@@ -1,6 +1,6 @@
 {
   "name": "react-current-page-fallback",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Keep the current page rendered as a fallback until the new page is loaded with React.lazy and React.Suspense",
   "private": false,
   "author": "Asif Vora <asifvora0@gmail.com>",
@@ -17,6 +17,7 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.dev.js",
     "build": "webpack --config ./webpack.config.prod.js",
+    "publish": "yarn build && cp package.json ./lib && cd ./lib",
     "test": "jest --coverage"
   },
   "keywords": [
