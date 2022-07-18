@@ -23,6 +23,6 @@
     "resolveJsonModule": true
   },
   "extends": "./tsconfig.paths.json",
-  "include": ["src"],
+  "include": ["packages/current-page-fallback/src"],
   "exclude": ["node_modules", "lib"]
 }

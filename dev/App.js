@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { FallbackProvider } from "../index";
+import { FallbackProvider } from "../packages/current-page-fallback/src/index";
 
 const Home = React.lazy(() => import("./pages/Home"));
 const About = React.lazy(() => import("./pages/About"));

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Nav } from '../components/Nav';
-import { FallbackPageWrapper } from '../../index';
+import { FallbackPageWrapper } from '../../packages/current-page-fallback/src/index';
 
 const Home  = () => {
 
