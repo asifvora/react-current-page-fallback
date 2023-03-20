@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React from 'react';
 import { usePageRoute } from '../hooks/usePageRoute';
 
 interface PageWrapperProps {
@@ -8,9 +8,9 @@ interface PageWrapperProps {
 export const FallbackPageWrapper: React.FC<PageWrapperProps> = ({ children }: PageWrapperProps) => {
     const { onLoad } = usePageRoute();
 
-    const render = useMemo(() => children, [children]);
+    const render = React.useMemo(() => children, [children]);
 
-    useEffect(() => {
+    React.useEffect(() => {
         onLoad(render);
     }, [onLoad, render]);
 

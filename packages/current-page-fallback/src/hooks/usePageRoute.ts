@@ -1,10 +1,10 @@
-import { useCallback, useContext } from 'react';
+import React from 'react';
 import { FallbackContext, FallbackType } from '../providers/FallbackProvider';
 
 export const usePageRoute = (): any => {
-    const { updateFallback } = useContext(FallbackContext);
+    const { updateFallback } = React.useContext(FallbackContext);
 
-    const onLoad = useCallback(
+    const onLoad = React.useCallback(
         (component: FallbackType | undefined) => {
             if (component === undefined) {
                 component = null;

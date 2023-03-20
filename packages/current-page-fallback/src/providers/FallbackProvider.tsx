@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React from 'react';
 import ProgressBar from 'react-topbar-progress-indicator';
 
 // Progress Bar -> Configuration
@@ -29,13 +29,13 @@ interface FallbackProviderProps {
 export const FallbackProvider: React.FC<FallbackProviderProps> = ({
     children,
 }) => {
-    const [fallback, setFallback] = useState<FallbackType>(null);
+    const [fallback, setFallback] = React.useState<FallbackType>(null);
 
-    const updateFallback = useCallback((fallbackElement: FallbackType) => {
+    const updateFallback = React.useCallback((fallbackElement: FallbackType) => {
         setFallback(() => fallbackElement);
     }, []);
 
-    const renderChildren = useMemo(() => children, [children]);
+    const renderChildren = React.useMemo(() => children, [children]);
 
     return (
         <FallbackContext.Provider value={{ updateFallback }}>
