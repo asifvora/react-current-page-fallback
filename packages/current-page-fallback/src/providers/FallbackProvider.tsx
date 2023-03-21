@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import ProgressBar from 'react-topbar-progress-indicator';
 
 // Progress Bar -> Configuration

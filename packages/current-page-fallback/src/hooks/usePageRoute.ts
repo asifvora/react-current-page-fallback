@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { FallbackContext, FallbackType } from '../providers/FallbackProvider';
 
 export const usePageRoute = (): any => {
