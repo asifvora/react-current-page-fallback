@@ -1,16 +1,6 @@
 import * as React from 'react';
 import ProgressBar from 'react-topbar-progress-indicator';
 
-// Progress Bar -> Configuration
-ProgressBar.config({
-    barColors: {
-        '0': '#fff86d',
-        '1.0': '#fff86d',
-    },
-    shadowBlur: 0,
-    barThickness: 4,
-});
-
 export type FallbackType = NonNullable<React.ReactNode> | null;
 
 export interface FallbackContextType {
@@ -22,12 +12,16 @@ export const FallbackContext = React.createContext<FallbackContextType>({
 });
 
 interface FallbackProviderProps {
-    children: React.ReactNode | React.ReactElement | null
+    children: React.ReactNode | React.ReactElement | null;
+    loadingBarColor?: string;
+    initialLoadingScreen?: React.ReactNode;
 }
 
 // eslint-disable-next-line react/destructuring-assignment
 export const FallbackProvider: React.FC<FallbackProviderProps> = ({
     children,
+    loadingBarColor = '#fff86d',
+    initialLoadingScreen,
 }) => {
     const [fallback, setFallback] = React.useState<FallbackType>(null);
 
@@ -35,12 +29,28 @@ export const FallbackProvider: React.FC<FallbackProviderProps> = ({
         setFallback(() => fallbackElement);
     }, []);
 
+    React.useEffect(() => {
+        ProgressBar.config({
+            barColors: {
+                '0': loadingBarColor,
+                '1.0': loadingBarColor,
+            },
+            shadowBlur: 0,
+            barThickness: 4,
+        });
+    }, [loadingBarColor]);
+
     const renderChildren = React.useMemo(() => children, [children]);
 
     return (
         <FallbackContext.Provider value={{ updateFallback }}>
             <React.Suspense
-                fallback={<><ProgressBar />{fallback}</>}
+                fallback={
+                    <>
+                        {initialLoadingScreen || <ProgressBar />}
+                        {fallback}
+                    </>
+                }
             >
                 {renderChildren}
             </React.Suspense>
